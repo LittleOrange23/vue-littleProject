@@ -4,7 +4,10 @@
     <mt-header fixed title="小豆芽的秘密花园"></mt-header>
 
     <!-- 中间 router-view 区域 -->
-		<router-view></router-view>
+		<transition>
+			<router-view></router-view>
+		</transition>
+		
 
     <!-- 底部 tabbar 区域 -->
     <nav class="mui-bar mui-bar-tab">
@@ -31,9 +34,23 @@
 <script>
   
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
   .vue-containt {
     padding-top: 40px;
-  }
+		overflow-x: hidden;//隐藏转换页面时出现x轴出现的滚动条
+	}
+	.v-enter {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	.v-leave-to {
+		opacity: 0;
+		transform: translateX(-100%);
+		position: absolute; //解决转换页面时出现中间内容部分向下的问题
+	}
+	.v-enter-active,
+	.v-leave-active {
+		transition: all 0.4s ease; 
+	}
 </style>
 
