@@ -1,0 +1,84 @@
+<template>
+ <div class="page">
+   <ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="https://avatars1.githubusercontent.com/u/43208783?s=40&v=4">
+						<div class="mui-media-body">
+							<h1>点进去你就输了</h1>
+							<p class='mui-ellipsis'>
+                <span>发表时间：2018-10-26 13:17:36</span>
+                <span>点击：10000次</span>
+              </p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="https://avatars1.githubusercontent.com/u/43208783?s=40&v=4">
+						<div class="mui-media-body">
+							<h1>点进去你就输了</h1>
+							<p class='mui-ellipsis'>
+                <span>发表时间：2018-10-26 13:17:36</span>
+                <span>点击：10000次</span>
+              </p>
+						</div>
+					</a>
+				</li>
+        <li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="https://avatars1.githubusercontent.com/u/43208783?s=40&v=4">
+						<div class="mui-media-body">
+							<h1>点进去你就输了</h1>
+							<p class='mui-ellipsis'>
+                <span>发表时间：2018-10-26 13:17:36</span>
+                <span>点击：10000次</span>
+              </p>
+						</div>
+					</a>
+				</li>
+        <li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="https://avatars1.githubusercontent.com/u/43208783?s=40&v=4">
+						<div class="mui-media-body">
+							<h1>点进去你就输了</h1>
+							<p class='mui-ellipsis'>
+                <span>发表时间：2018-10-26 13:17:36</span>
+                <span>点击：10000次</span>
+              </p>
+						</div>
+					</a>
+				</li>
+			</ul>
+ </div>
+</template>
+
+<script type="text/ecmascript-6">
+export default {
+ data() {
+ return {
+
+ }
+ },
+ components: {
+
+ }
+}
+</script>
+
+<style scoped lang="scss">
+  .mui-table-view {
+    li {
+      h1 {
+        font-size: 14px;
+      }
+      .mui-ellipsis {
+        font-size: 13px;
+        color: #1e89e1;
+        //css3的定位，设置两端对齐
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+</style>
