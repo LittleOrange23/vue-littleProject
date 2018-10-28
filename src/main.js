@@ -1,6 +1,7 @@
 //导入vue
 import Vue from "vue"
 import app from "./app.vue"
+import moment from "moment"
 
 //1.1导入路由
 import VueRouter from "vue-router"
@@ -12,7 +13,14 @@ import router from "./router.js"
 import vueResource from "vue-resource"
 //2.2安装VueResource
 Vue.use(vueResource)
+//设置全局根路径
+//Vue.http.options.root = '/root';
 
+//定义全局时间过滤器
+Vue.filter("dateFormate", function (dateStr, pattern = "YYYY-MM-DD HH-mm-ss") { 
+  //使用moment插件格式化时间
+  return moment(dateStr).formate(pattern)
+}) 
 //导入MUI样式
 import "../lib/mui/css/mui.min.css"
 import "../lib/mui/css/icons-extra.css"
