@@ -11,6 +11,7 @@ import buyGoodsContainer from "./components/sixgrid/buyGoods.vue"
 import feedBackContainer from "./components/sixgrid/feedBack.vue"
 import videoModuleContainer from "./components/sixgrid/videoModule.vue"
 import connectMeContainer from "./components/sixgrid/connectMe.vue"
+import newsInfoContainer from "./components/sixgrid/newsInfo.vue"
 
 
 //创建路由对象
@@ -26,7 +27,8 @@ var router = new VueRouter({
     { path: "/home/buyGoods", component: buyGoodsContainer },
     { path: "/home/feedBack", component: feedBackContainer },
     { path: "/home/videoModule", component: videoModuleContainer },
-    { path: "/home/connectMe", component: connectMeContainer},
+    { path: "/home/connectMe", component: connectMeContainer },
+    { path: "/home/newsInfo", component: newsInfoContainer }
   ],
   linkActiveClass: "mui-active"//配置路由点击后高亮显示
 })

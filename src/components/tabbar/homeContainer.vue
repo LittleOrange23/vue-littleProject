@@ -45,12 +45,12 @@ export default {
    this.getLunbotu()
  },
  methods: {
-   getLunbotu() {
-     //获取后端接口，这个接口是个测试链接，没有图片
-     this.$http.get("http://jsonplaceholder.typicode.com/users").then(result => {
-       console.log(result.body)
-       console.log(result.body[0].name)
-       this.lunbotuList = result.body
+    getLunbotu() {
+      //获取后端接口，这个接口是个测试链接，没有图片
+      this.$http.get("/users").then(result => {
+      console.log(result.body)
+      console.log(result.body[0].name)
+      this.lunbotuList = result.body
       //  Toast("获取成功")
      })
    }
