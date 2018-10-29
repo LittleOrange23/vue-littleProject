@@ -28,7 +28,7 @@ var router = new VueRouter({
     { path: "/home/feedBack", component: feedBackContainer },
     { path: "/home/videoModule", component: videoModuleContainer },
     { path: "/home/connectMe", component: connectMeContainer },
-    { path: "/home/newsInfo", component: newsInfoContainer }
+    { path: "/home/newsInfo/:uniquekey", component: newsInfoContainer }
   ],
   linkActiveClass: "mui-active"//配置路由点击后高亮显示
 })

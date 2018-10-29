@@ -1,6 +1,6 @@
 <template>
  <div class="newsInfo-container">
-   <h3 class="title">新闻标题</h3>
+   <h3 class="title">新闻标题---{{ uniquekey }}</h3>
    <p class="subtitle">
      <span>发表时间：</span>
      <span>点击：0次</span>
@@ -17,7 +17,7 @@
 export default {
  data() {
  return {
-
+   uniquekey: this.$route.params.uniquekey
  }
  },
  components: {

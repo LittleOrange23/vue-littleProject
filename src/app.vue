@@ -37,6 +37,7 @@
 <style lang="scss" scoped>
   .vue-containt {
     padding-top: 40px;
+		padding-bottom: 50px;
 		overflow-x: hidden;//隐藏转换页面时出现x轴出现的滚动条
 	}
 	.v-enter {

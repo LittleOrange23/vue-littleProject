@@ -1,17 +1,17 @@
 <template>
  <div class="page">
    <ul class="mui-table-view">
-				<li class="mui-table-view-cell mui-media">
-					<a href="javascript:;">
-						<img class="mui-media-object mui-pull-left" src="https://avatars1.githubusercontent.com/u/43208783?s=40&v=4">
+				<li v-for="item in newsList" :key="item.url" class="mui-table-view-cell mui-media">
+					<router-link :to="'/home/newsInfo/' + item.uniquekey">
+						<img class="mui-media-object mui-pull-left" :src="item.thumbnail_pic_s">
 						<div class="mui-media-body">
-							<h1>点进去你就输了</h1>
+							<h1>{{ item.title }}</h1>
 							<p class='mui-ellipsis'>
-                <span>发表时间：2018-10-26 13:17:36</span>
-                <span>点击：10000次</span>
+                <span>发表时间：{{ item.date }}</span>
+                <span>作者：{{ item.author_name }}</span>
               </p>
 						</div>
-					</a>
+					</router-link>
 				</li>
 			
 			</ul>
