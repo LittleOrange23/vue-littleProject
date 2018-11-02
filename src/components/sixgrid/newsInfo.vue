@@ -7,13 +7,18 @@
    </p>
 
   <hr>
+  <!-- 内容区域 -->
    <div class="content">
+     <!-- 评论子组件区域 -->
 
+     <comment-box :id="this.uniquekey"></comment-box>
    </div>
  </div>
 </template>
 
 <script type="text/ecmascript-6">
+import comment from "../subcomponents/comment.vue"
+
 export default {
  data() {
  return {
@@ -21,7 +26,7 @@ export default {
  }
  },
  components: {
-
+   'commentBox' : comment
  }
 }
 </script>

@@ -31,7 +31,7 @@ export default {
 	},
  	methods: {
 	 	getNewsList() {
-		 	this.$http.get("/news?type=top&key=20a5e79cc79b7cb76de478e246659668").then(result => {
+		 	this.$http.get("/news?type=guonei&key=20a5e79cc79b7cb76de478e246659668").then(result => {
 				 console.log(result.body)
 				 if( result.body.error_code===0 )
 				 {
