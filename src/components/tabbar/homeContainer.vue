@@ -3,11 +3,11 @@
    <!-- 轮播图 -->
   <mt-swipe :auto="4000">
     <!-- 向页面渲染数据，测试一下，这里没图片，所以先注释掉 -->
-    <!-- <mt-swipe-item v-for="item in lunbotuList" :key="item.id">
-      <img :src="item.username" alt="">
-    </mt-swipe-item> -->
-    <mt-swipe-item>2</mt-swipe-item>
-    <mt-swipe-item>3</mt-swipe-item>
+    <mt-swipe-item v-for="item in lunbotuList" :key="item.id">
+      <img :src="item.img" alt="">
+    </mt-swipe-item>
+    <!-- <mt-swipe-item>2</mt-swipe-item>
+    <mt-swipe-item>3</mt-swipe-item> -->
   </mt-swipe>
   <!-- 九宫格变六宫格 -->
   <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -34,58 +34,66 @@
 </template>
 
 <script type="text/ecmascript-6">
-import {Toast} from "mint-ui"
+import { Toast } from "mint-ui";
 export default {
- data() {
- return {
-   lunbotuList: [] //保存轮播图的数组
- }
- },
- created() {
-   //this.getLunbotu()
- },
- methods: {
-    //getLunbotu() {
+  data() {
+    return {
+      lunbotuList: [] //保存轮播图的数组
+    };
+  },
+  created() {
+    this.getLunbotu();
+  },
+  methods: {
+    getLunbotu() {
       //获取后端接口，这个接口是个测试链接，没有图片
-      //this.$http.get("/users").then(result => {
-      // console.log(result.body)
-      // console.log(result.body[0].name)
-     // this.lunbotuList = result.body
-      //  Toast("获取成功")
-    // })
-  // }
- },
- components: {
-
- }
-}
+      this.$http
+        .get("http://www.liulongbin.top:3005/api/getlunbo")
+        .then(result => {
+          console.log(result.body);
+          if (status == 0) {
+            this.lunbotuList = result.body.message;
+          }
+          // console.log(result.body[0].name);
+          else {
+            Toast("获取成功");
+          }
+        });
+    }
+  },
+  components: {}
+};
 </script>
 
 <style scoped lang="scss">
-  .mint-swipe {
-    height: 200px;
-    .mint-swipe-item:nth-child(1) {
-      background-color: antiquewhite;
-    }
-    .mint-swipe-item:nth-child(2) {
-      background-color: pink;
-    }
-    .mint-swipe-item:nth-child(3) {
-      background-color: lightgreen;
-    }
-  }
-  .mui-grid-view.mui-grid-9 {
-    background-color: #fff;
-    border: 0;
+.mint-swipe {
+  height: 200px;
+  .mint-swipe-item {
+    background-color: antiquewhite;
     img {
-      width: 60px;
-      height: 60px;
-    }
-    .mui-media-body {
-      font-size: 13px;
+      width: 375px;
+      height: 200px;
     }
   }
-  .mui-grid-view.mui-grid-9 .mui-table-view-cell {
-    border: 0;
+  // .mint-swipe-item:nth-child(2) {
+  //   background-color: pink;
+  // }
+  // .mint-swipe-item:nth-child(3) {
+  //   background-color: lightgreen;
+  // }
+}
+.mui-grid-view.mui-grid-9 {
+  background-color: #fff;
+  border: 0;
+  img {
+    width: 60px;
+    height: 60px;
   }
+  .mui-media-body {
+    font-size: 13px;
+  }
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+  border: 0;
+}
 </style>

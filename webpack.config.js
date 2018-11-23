@@ -43,7 +43,8 @@ module.exports = {
       //需要代理的路径,需要代理的域名必须配置为true，才能正确代理
       // "/users": { target: "http://v.juhe.cn/toutiao/index", changeOrigin:true},
       "/news": { target: "http://v.juhe.cn/toutiao/index?type=guonei&key=20a5e79cc79b7cb76de478e246659668", changeOrigin: true, secure: false },
-      "/mycomments": { target: "http://jsonplaceholder.typicode.com/comments", changeOrigin: true, secure: false }
+      "/mycomments": { target: "http://jsonplaceholder.typicode.com/comments", changeOrigin: true, secure: false },
+      // "/mylunbo": { target: "http://www.liulongbin.top:3005/api/getlunbo", changeOrigin: true, secure: false }
     }
 
   },
