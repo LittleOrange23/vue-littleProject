@@ -71,8 +71,8 @@ export default {
   .mint-swipe-item {
     background-color: antiquewhite;
     img {
-      width: 375px;
-      height: 200px;
+      width: 100%;
+      height: 100%;
     }
   }
   // .mint-swipe-item:nth-child(2) {
